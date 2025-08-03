@@ -1,0 +1,10 @@
+{
+  "name": "family-flow-landing",
+  "version": "1.0.0",
+  "description": "Family Flow landing page - static site",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site - no start script needed'"
+  },
+  "type": "module"
+}
