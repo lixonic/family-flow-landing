@@ -98,10 +98,11 @@
       padding: 1rem 0;
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
       z-index: 1000;
       border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+      transition: all 0.3s ease;
     }
     
     .nav {
@@ -957,6 +958,19 @@
         display: flex;
       }
       
+      .header {
+        position: fixed;
+        width: 100%;
+        padding: 0.75rem 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .gradient-bg {
+        padding-top: 80px;
+      }
+      
       .hero {
         padding: 3rem 0;
       }
@@ -1682,6 +1696,26 @@
   <script>
     // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Enhanced mobile header on scroll
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+      if (window.innerWidth <= 768) {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          // Scrolling down - slightly reduce header size
+          header.style.padding = '0.5rem 0';
+        } else {
+          // Scrolling up - restore header size
+          header.style.padding = '0.75rem 0';
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      }
+    });
     
     // Mobile menu functionality
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
