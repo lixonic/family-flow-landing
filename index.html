@@ -51,6 +51,7 @@
       min-height: 100vh;
       position: relative;
       overflow: hidden;
+      padding-top: 80px;
     }
     
     .gradient-bg::before {
@@ -96,8 +97,9 @@
     /* Header */
     .header {
       padding: 1rem 0;
-      position: sticky;
+      position: fixed;
       top: 0;
+      width: 100%;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(15px);
       z-index: 1000;
@@ -526,6 +528,61 @@
       line-height: 1.7;
     }
 
+    /* Insights Section */
+    .insights {
+      padding: 6rem 0;
+      background: white;
+    }
+    
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+    
+    .insight-card {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      padding: 2.5rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(139, 92, 246, 0.1);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .insight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+    }
+    
+    .insight-number {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #8b5cf6, #ec4899);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    
+    .insight-card h3 {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+      color: #1f2937;
+    }
+    
+    .insight-card p {
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
     /* Features Section */
     .features {
       padding: 6rem 0;
@@ -591,6 +648,65 @@
       font-size: 0.9rem;
       color: #5b21b6;
       margin: 0;
+    }
+
+    /* Competitive Section */
+    .competitive {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #faf5ff 0%, #f0f9ff 100%);
+    }
+    
+    .comparison-table {
+      max-width: 900px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+    
+    .comparison-table table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .comparison-table th {
+      background: linear-gradient(135deg, #8b5cf6, #ec4899);
+      color: white;
+      padding: 1.5rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    .comparison-table td {
+      padding: 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+      vertical-align: top;
+    }
+    
+    .comparison-table tr:nth-child(even) {
+      background: #f9fafb;
+    }
+    
+    .comparison-table tr:hover {
+      background: #f3f4f6;
+    }
+    
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: #1f2937;
+      width: 200px;
+    }
+    
+    .comparison-table td:nth-child(2) {
+      color: #059669;
+      font-weight: 500;
+    }
+    
+    .comparison-table td:nth-child(3) {
+      color: #6b7280;
     }
 
     /* Graduation Section */
@@ -821,8 +937,7 @@
     .cta-content p {
       font-size: 1.2rem;
       margin-bottom: 2.5rem;
-      max-width: 600px;
-      margin-left: auto;
+       margin-left: auto;
       margin-right: auto;
       opacity: 0.95;
     }
@@ -913,6 +1028,13 @@
       color: #8b5cf6;
     }
     
+    .footer-about {
+      color: #9ca3af;
+      line-height: 1.6;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    
     .footer-bottom {
       border-top: 1px solid #374151;
       padding-top: 2rem;
@@ -959,16 +1081,10 @@
       }
       
       .header {
-        position: fixed;
-        width: 100%;
         padding: 0.75rem 0;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-      
-      .gradient-bg {
-        padding-top: 80px;
       }
       
       .hero {
@@ -1211,7 +1327,7 @@
         
         <!-- Desktop Navigation -->
         <ul class="nav-links">
-          <li><a href="#story">Meet Creators</a></li>
+          <li><a href="./blog/">Blog</a></li>
           <li><a href="#philosophy">Philosophy</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#graduation">Journey</a></li>
@@ -1228,7 +1344,7 @@
         <!-- Mobile Navigation Overlay -->
         <div class="mobile-nav-overlay" id="mobile-nav-overlay">
           <ul class="mobile-nav-links">
-            <li><a href="#story" onclick="closeMobileMenu()">Meet Creators</a></li>
+            <li><a href="./blog/" onclick="closeMobileMenu()">Blog</a></li>
             <li><a href="#philosophy" onclick="closeMobileMenu()">Philosophy</a></li>
             <li><a href="#features" onclick="closeMobileMenu()">Features</a></li>
             <li><a href="#graduation" onclick="closeMobileMenu()">Journey</a></li>
@@ -1243,8 +1359,8 @@
       <div class="hero-badge">❤️ Family First Digital Wellness</div>
       <h1>Building Connections That<br>Last Beyond Any App</h1>
       <p class="hero-subtitle">
-        Family Flow represents a fundamental shift from traditional digital wellness apps. Rather than creating dependency, 
-        <strong>our success is measured by families confidently "graduating" to independent offline connection practices</strong>.
+        Families worldwide endure nightly tension over screen time. Traditional digital wellness apps often add friction through sign-ups, analytics, and "parental control" mindsets, which increase resistance, shame, and abandonment. 
+        <strong>Family Flow offers a frictionless, privacy-absolute ritual that restores real connection at home</strong>.
       </p>
       
       <div class="cta-buttons">
@@ -1316,6 +1432,48 @@
           <div class="philosophy-icon">🔄</div>
           <h3>Progressive Independence</h3>
           <p>Each interaction builds confidence and skills, gradually reducing dependence on digital prompts while strengthening natural family rhythms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Insights Section -->
+  <section class="insights">
+    <div class="container">
+      <div class="section-header">
+        <h2>Research-Based Design</h2>
+        <p class="section-subtitle">Five key insights that shaped Family Flow's approach to family wellness</p>
+      </div>
+      
+      <div class="insights-grid">
+        <div class="insight-card">
+          <div class="insight-number">1</div>
+          <h3>Gentle Offline Rituals</h3>
+          <p>Families crave brief, calming rituals—not digital audits or complex dashboards that add stress to daily life.</p>
+        </div>
+        
+        <div class="insight-card">
+          <div class="insight-number">2</div>
+          <h3>Privacy & Trust First</h3>
+          <p>No logins, no tracking—absolute privacy is paramount, especially as surveillance fears continue to rise.</p>
+        </div>
+        
+        <div class="insight-card">
+          <div class="insight-number">3</div>
+          <h3>Shared Device Reality</h3>
+          <p>Most families pass a single device—our design accommodates this universal truth rather than fighting it.</p>
+        </div>
+        
+        <div class="insight-card">
+          <div class="insight-number">4</div>
+          <h3>Empathy Over Competition</h3>
+          <p>Rituals must foster understanding, not rivalry, to avoid creating status divides and family tension.</p>
+        </div>
+        
+        <div class="insight-card">
+          <div class="insight-number">5</div>
+          <h3>Emotional Safety Always</h3>
+          <p>Positive feedback, cultural flexibility, and zero punishment are critical for building sustained family habits.</p>
         </div>
       </div>
     </div>
@@ -1393,11 +1551,11 @@
             <h3>Privacy-First Data Architecture</h3>
           </div>
           <ul class="feature-list">
-            <li>Zero data collection - no servers, accounts, or tracking</li>
-            <li>Local storage only - all family data stays on device</li>
-            <li>Offline functionality - works without internet</li>
-            <li>Family data export - complete ownership of memories</li>
-            <li>Selective data management - families control everything</li>
+            <li>Zero data collection with no servers, accounts, or tracking</li>
+            <li>Local storage only with all family data staying on device</li>
+            <li>Offline functionality that works without internet</li>
+            <li>Family data export giving complete ownership of memories</li>
+            <li>Selective data management where families control everything</li>
           </ul>
           <p class="feature-psychology"><strong>Psychology:</strong> Builds trust through transparency, ensuring families feel safe sharing vulnerable emotions.</p>
         </div>
@@ -1408,13 +1566,62 @@
             <h3>Progressive Web App Technology</h3>
           </div>
           <ul class="feature-list">
-            <li>Native app experience - installs like a regular app</li>
-            <li>Cross-platform compatibility - phones, tablets, desktops</li>
-            <li>Offline-first design - functionality without connectivity</li>
-            <li>Fast loading - optimized for quick daily check-ins</li>
-            <li>Automatic updates - always current without app stores</li>
+            <li>Native app experience that installs like a regular app</li>
+            <li>Cross-platform compatibility across phones, tablets, desktops</li>
+            <li>Offline-first design providing functionality without connectivity</li>
+            <li>Fast loading optimized for quick daily check-ins</li>
+            <li>Automatic updates keeping you current without app stores</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitive Advantages Section -->
+  <section class="competitive">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose Family Flow</h2>
+        <p class="section-subtitle">How we compare to leading wellness apps</p>
+      </div>
+      
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Family Flow</th>
+              <th>Traditional Apps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Privacy & Onboarding</td>
+              <td>No login, no tracking, works offline</td>
+              <td>Accounts, cloud sync, analytics</td>
+            </tr>
+            <tr>
+              <td>Multi-User Support</td>
+              <td>Shared device friendly, communal logs</td>
+              <td>Individual profiles, separate devices</td>
+            </tr>
+            <tr>
+              <td>User Experience</td>
+              <td>1-tap flow, no distractions</td>
+              <td>Dense dashboards, pop-ups, gamification</td>
+            </tr>
+            <tr>
+              <td>Emotional Safety</td>
+              <td>Celebrates participation, never penalizes</td>
+              <td>Leaderboards, streaks, achievement pressure</td>
+            </tr>
+            <tr>
+              <td>Digital Wellness</td>
+              <td>Gentle reflection prompts</td>
+              <td>Usage monitoring, time restrictions</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -1626,42 +1833,13 @@
         <p>Join families who are building authentic connections that last beyond any app. Your 45-day journey to independent family connection starts now.</p>
         <div class="cta-buttons">
           <a href="https://app.familyflow.space/" class="btn btn-primary btn-large">Start Your 2-Minute Ritual</a>
-          <a href="./pdf/Family Flow.pdf" class="btn btn-secondary btn-large" target="_blank">Download Project Report</a>
+          <a href="./blog/" class="btn btn-secondary btn-large">Read Our Blog</a>
         </div>
-        <p class="cta-note">✅ No sign-up required • ✅ Zero data collection • ✅ Works offline</p>
+        <p class="cta-note">No sign-up required, zero data collection, and works offline</p>
       </div>
     </div>
   </section>
 
-  <!-- Meet the Creators Section -->
-  <section id="story" class="story">
-    <div class="container">
-      <div class="story-content">
-        <div class="story-text">
-          <div class="story-header">
-            <h2>Meet the Creators</h2>
-            <p class="story-tagline">From Weekend Project to Family Revolution</p>
-          </div>
-          
-          <div class="story-narrative">
-            <p>
-              <strong>Helen Francis</strong> created Family Flow during her final-year BBA project, combining business insight with her nursing background. Built in one focused weekend with simple HTML and JavaScript. <strong>Lixon Louis</strong> later transformed it into the full-featured PWA you see today.
-            </p>
-          </div>
-        </div>
-        
-        <div class="story-visual">
-          <div class="story-stats">
-            <div class="story-stat">
-              <div class="stat-visual">⏰</div>
-              <h3>Weekend Build</h3>
-              <p>Built in one focused weekend</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -1682,7 +1860,11 @@
             <h4>Features</h4>
             <a href="#features">Complete Feature Set</a>
             <a href="#metrics">Success Metrics</a>
-            <a href="./pdf/Family Flow.pdf" target="_blank">Project Report (PDF)</a>
+            <a href="./blog/">Blog</a>
+          </div>
+          <div class="footer-section">
+            <h4>About</h4>
+            <p class="footer-about"><strong>Helen Francis</strong> created Family Flow during her final-year BBA project, combining business insight with her nursing background. <strong>Lixon Louis</strong> transformed it into the full-featured PWA you see today.</p>
           </div>
         </div>
       </div>

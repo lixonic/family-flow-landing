@@ -1,10 +1,19 @@
 {
   "name": "family-flow-landing",
   "version": "1.0.0",
-  "description": "Family Flow landing page - static site",
+  "description": "Family Flow landing page with blog - static site generator",
   "scripts": {
-    "build": "echo 'Static site - no build needed'",
-    "start": "echo 'Static site - no start script needed'"
+    "build": "node build.js",
+    "dev": "node build.js && npx serve .",
+    "start": "npx serve ."
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "marked": "^9.1.6",
+    "gray-matter": "^4.0.3",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
 }

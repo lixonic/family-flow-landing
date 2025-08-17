@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Family Flow Blog</title>
+    <description>Insights on family connection, digital wellness, and building lasting relationships beyond technology</description>
+    <link>https://familyflow.vercel.app/blog/</link>
+    <atom:link href="https://familyflow.vercel.app/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 17 Aug 2025 09:21:50 GMT</lastBuildDate>
+    <generator>Family Flow Static Site Generator</generator>
+    
+    <item>
+      <title><![CDATA[Why Every Family App Should Have an Exit Strategy]]></title>
+      <description><![CDATA[The case for building technology that makes itself unnecessary - exploring the graduation platform model that measures success by families no longer needing the app.]]></description>
+      <link>https://familyflow.vercel.app/blog/why-every-family-app-should-have-an-exit-strategy.html</link>
+      <guid>https://familyflow.vercel.app/blog/why-every-family-app-should-have-an-exit-strategy.html</guid>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+  
+  </channel>
+</rss>

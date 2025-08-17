@@ -14,6 +14,14 @@
       "handle": "filesystem"
     },
     {
+      "src": "/blog/?$",
+      "dest": "/blog/index.html"
+    },
+    {
+      "src": "/blog/([^/]+)/?$",
+      "dest": "/blog/$1.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
