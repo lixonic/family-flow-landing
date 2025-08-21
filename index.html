@@ -54,34 +54,6 @@
       padding-top: 80px;
     }
     
-    .gradient-bg::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: 
-        radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
-      animation: float 20s ease-in-out infinite;
-      z-index: 0;
-    }
-    
-    .gradient-bg::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      right: -50%;
-      bottom: -50%;
-      background-image: 
-        radial-gradient(circle at 60% 30%, rgba(139, 92, 246, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 30% 70%, rgba(236, 72, 153, 0.05) 0%, transparent 40%);
-      animation: float 25s ease-in-out infinite reverse;
-      z-index: 0;
-    }
     
     .gradient-bg > * {
       position: relative;
@@ -1363,10 +1335,6 @@
         <strong>Family Flow offers a frictionless, privacy-absolute ritual that restores real connection at home</strong>.
       </p>
       
-      <div class="cta-buttons">
-        <a href="#philosophy" class="btn btn-primary">Discover the Philosophy</a>
-        <a href="#graduation" class="btn btn-secondary">Your Graduation Journey</a>
-      </div>
       
       <div class="hero-stats">
         <div class="stat">
@@ -1383,11 +1351,60 @@
         </div>
       </div>
       
-      <div class="hero-image">
-        <img src="./images/app-hero.png" alt="Family Flow App Preview" onerror="this.style.display='none'">
-      </div>
     </section>
   </div>
+
+  <!-- Who Is Family Flow For Section -->
+  <section class="app-journey">
+    <div class="container">
+      <div class="section-header">
+        <h2>Who Is Family Flow For?</h2>
+        <p class="section-subtitle">If this sounds like your family, you're in the right place</p>
+      </div>
+      
+      <div class="journey-grid">
+        <div class="journey-item">
+          <div class="journey-image">
+            <img src="./images/welcome-1.png" alt="Family Check-in Welcome" loading="lazy">
+          </div>
+          <div class="journey-content">
+            <h3>Does This Sound Familiar?</h3>
+            <p>Screen time battles. One-word answers. That feeling your family is drifting apart, even when you're in the same room.</p>
+          </div>
+        </div>
+        
+        <div class="journey-item reverse">
+          <div class="journey-image">
+            <img src="./images/welcome-2.png" alt="Mood Tracking Interface" loading="lazy">
+          </div>
+          <div class="journey-content">
+            <h3>A Gentle Solution</h3>
+            <p>No lectures. No screen time battles. Just a gentle daily ritual that brings your family's hearts back together, one check-in at a time.</p>
+          </div>
+        </div>
+        
+        <div class="journey-item">
+          <div class="journey-image">
+            <img src="./images/welcome-3.png" alt="Family Gratitude Practice" loading="lazy">
+          </div>
+          <div class="journey-content">
+            <h3>Building Real Connection</h3>
+            <p>Through daily mood sharing, gratitude moments, and gentle digital reflection, families rediscover authentic connection in just 2 minutes a day.</p>
+          </div>
+        </div>
+        
+        <div class="journey-item reverse">
+          <div class="journey-image">
+            <img src="./images/welcome-4.png" alt="Graduation Progress" loading="lazy">
+          </div>
+          <div class="journey-content">
+            <h3>Graduation: Your Ultimate Goal</h3>
+            <p>In 30-45 days, you'll have built the habit of truly seeing each other. The app becomes training wheels you happily leave behind.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Philosophy Section -->
   <section id="philosophy" class="philosophy">
@@ -1731,57 +1748,6 @@
     </div>
   </section>
 
-  <!-- App Journey Section -->
-  <section class="app-journey">
-    <div class="container">
-      <div class="section-header">
-        <h2>Experience Your Family's Journey</h2>
-        <p class="section-subtitle">See how Family Flow guides families through their 2-minute daily connection ritual</p>
-      </div>
-      
-      <div class="journey-grid">
-        <div class="journey-item">
-          <div class="journey-image">
-            <img src="./images/welcome-1.png" alt="Family Check-in Welcome" loading="lazy">
-          </div>
-          <div class="journey-content">
-            <h3>Welcome to Connection</h3>
-            <p>Begin your family's journey with a warm welcome that sets the tone for authentic, judgment-free sharing.</p>
-          </div>
-        </div>
-        
-        <div class="journey-item reverse">
-          <div class="journey-image">
-            <img src="./images/welcome-2.png" alt="Mood Tracking Interface" loading="lazy">
-          </div>
-          <div class="journey-content">
-            <h3>Emotional Intelligence Building</h3>
-            <p>Daily mood check-ins with 9 carefully selected emotions, each receiving personalized, validating responses.</p>
-          </div>
-        </div>
-        
-        <div class="journey-item">
-          <div class="journey-image">
-            <img src="./images/welcome-3.png" alt="Family Gratitude Practice" loading="lazy">
-          </div>
-          <div class="journey-content">
-            <h3>Mindful Gratitude Practice</h3>
-            <p>2-minute breathing exercises and gratitude journaling that connects families through shared positive moments.</p>
-          </div>
-        </div>
-        
-        <div class="journey-item reverse">
-          <div class="journey-image">
-            <img src="./images/welcome-4.png" alt="Graduation Progress" loading="lazy">
-          </div>
-          <div class="journey-content">
-            <h3>Progress Toward Independence</h3>
-            <p>Track your family's journey to graduation with milestone celebrations at 15, 30, and 45 days.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Anti-Engagement Metrics Section -->
   <section class="metrics" id="metrics">
